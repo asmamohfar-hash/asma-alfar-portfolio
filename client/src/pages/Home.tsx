@@ -34,30 +34,43 @@ const skills = [
 const aiWorks = [
   {
     number: "01",
-    title: "مختبر صياغة الأوامر",
-    english: "Prompt Lab",
-    description: "تجارب منهجية لصياغة أوامر دقيقة وتحويل الأفكار المجردة إلى نتائج قابلة للتنفيذ.",
-    tags: ["Prompt Design", "Iteration"],
-    image: "/manus-storage/ai-prompt-lab_32150fdd.jpg",
+    title: "حلاقة مولدة بالذكاء الاصطناعي",
+    english: "AI Visual Scene",
+    description: "مشهد بصري مولد بالذكاء الاصطناعي يختبر الإضاءة، التكوين، والشخصيات في لقطة واحدة.",
+    tags: ["Generative Image", "Art Direction"],
+    image: "/manus-storage/barber-ai_a9f329e9.jpeg",
     accent: "violet",
+    source: "https://github.com/asmamohfar-hash/AsmaFinalWebsite",
   },
   {
     number: "02",
-    title: "سرد بصري بالذكاء الاصطناعي",
-    english: "Visual Storytelling",
-    description: "بناء لغة بصرية متماسكة تجمع بين الإبداع البشري وقدرات التوليد الحديثة.",
-    tags: ["Generative Art", "Direction"],
-    image: "/manus-storage/ai-visual-story_6e72a738.jpg",
+    title: "ورقة تصميم شخصية",
+    english: "Character Design Sheet",
+    description: "استكشاف هوية شخصية مرئية من خلال زوايا وتفاصيل متعددة، مع الحفاظ على اتساق الشكل.",
+    tags: ["Character Design", "Consistency"],
+    image: "/manus-storage/character-design_887dcb0c.jpeg",
     accent: "coral",
+    source: "https://github.com/asmamohfar-hash/AsmaFinalWebsite",
   },
   {
     number: "03",
-    title: "تصميم سير العمل الذكي",
-    english: "AI Workflow",
-    description: "تحويل المهام المتكررة إلى مسارات عملية أكثر وضوحًا، سرعة، ودقة.",
-    tags: ["Systems Thinking", "Automation"],
-    image: "/manus-storage/ai-workflow_d5a31655.jpg",
+    title: "بطاقة تعلم الكهرباء",
+    english: "Learning Card",
+    description: "تبسيط مفهوم تعليمي إلى بطاقة بصرية واضحة تجمع بين المعلومة، الرسم، وسهولة التذكر.",
+    tags: ["Visual Learning", "Infographic"],
+    image: "/manus-storage/electricity-card_4d55ac17.jpg",
     accent: "cyan",
+    source: "https://github.com/asmamohfar-hash/AsmaFinalWebsite",
+  },
+  {
+    number: "04",
+    title: "حملة صندوق التوصيل الذكي",
+    english: "Smart Delivery Concept",
+    description: "تصور إعلاني لمنتج ذكي يترجم الفكرة التقنية إلى صورة تسويقية جذابة وقابلة للمشاركة.",
+    tags: ["Product Concept", "Marketing Visual"],
+    image: "/manus-storage/smart-delivery_768200d6.jpg",
+    accent: "violet",
+    source: "https://github.com/asmamohfar-hash/AsmaFinalWebsite",
   },
 ];
 
@@ -208,6 +221,7 @@ export default function Home() {
                   <h3>{work.title}</h3>
                   <p>{work.description}</p>
                   <div className="tag-row">{work.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+                  <a className="work-source" href={work.source} target="_blank" rel="noreferrer"><Github size={13} /> المصدر على GitHub <ArrowUpLeft size={13} /></a>
                 </div>
               </article>
             ))}

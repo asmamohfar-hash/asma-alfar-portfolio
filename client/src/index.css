@@ -164,7 +164,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 .section-heading-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 54px; }
 .section-heading-row h2, .journey-aside h2, .credentials-grid h2, .contact-copy h2 { margin: 22px 0 0; color: #f4f0ea; font-size: clamp(42px, 5vw, 67px); font-weight: 500; line-height: 1.15; letter-spacing: -.07em; }
 .heading-aside { max-width: 350px; margin: 0 0 5px; color: #928c9d; font-size: 14px; line-height: 1.9; }
-.work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 19px; }
+.work-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .work-card { border: 1px solid rgba(244,240,234,.11); border-radius: 13px; overflow: hidden; background: #10101b; transition: transform .28s cubic-bezier(.23,1,.32,1), border-color .28s ease, box-shadow .28s ease; }
 .work-card:hover { transform: translateY(-9px); border-color: rgba(201,161,255,.6); box-shadow: 0 24px 50px rgba(0,0,0,.3); }
 .work-image-wrap { position: relative; height: 247px; overflow: hidden; background: #151523; }
@@ -176,10 +176,12 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 .work-card:hover .work-arrow { color: #0a0a12; background: #efb563; }
 .work-card-body { padding: 23px 22px 24px; }
 .work-english { display: block; color: #898294; font-size: 9px; letter-spacing: .1em; }
-.work-card h3 { margin: 10px 0 11px; color: #f4f0ea; font-size: 22px; font-weight: 600; letter-spacing: -.045em; }
+.work-card h3 { margin: 10px 0 11px; color: #f4f0ea; font-size: 20px; font-weight: 600; letter-spacing: -.045em; }
 .work-card p { min-height: 67px; margin: 0; color: #9992a1; font-size: 13px; line-height: 1.85; }
 .tag-row { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 21px; }
 .tag-row span, .timeline-chips span { padding: 6px 9px; border: 1px solid rgba(244,240,234,.12); border-radius: 999px; color: #aaa3b0; font: 9px "DM Mono", monospace; }
+.work-source { display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; color: #9f96ad; font: 10px "DM Mono", monospace; transition: color .2s ease, transform .2s ease; }
+.work-source:hover { color: #efb563; transform: translateX(-3px); }
 .work-violet .work-card-body { border-top: 2px solid #c9a1ff; }
 .work-coral .work-card-body { border-top: 2px solid #efb563; }
 .work-cyan .work-card-body { border-top: 2px solid #76d9e7; }
@@ -262,8 +264,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
   .stat-item { flex: 1; border-top: 1px solid rgba(244,240,234,.12); border-bottom: 0; }
   .stat-item:first-child { border-top: 1px solid rgba(244,240,234,.12); }
   .work-grid { grid-template-columns: repeat(2, 1fr); }
-  .work-card:last-child { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; }
-  .work-card:last-child .work-image-wrap { height: auto; }
+  .work-card:last-child { grid-column: auto; display: block; }
+  .work-card:last-child .work-image-wrap { height: 247px; }
   .journey-grid { gap: 60px; }
   .credentials-grid { gap: 60px; }
   .contact-panel { gap: 50px; padding: 55px 40px; }
