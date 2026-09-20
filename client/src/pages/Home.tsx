@@ -72,6 +72,16 @@ const aiWorks = [
     accent: "violet",
     source: "https://github.com/asmamohfar-hash/AsmaFinalWebsite",
   },
+  {
+    number: "05",
+    title: "أغنية لأطفالي الثلاثة",
+    english: "AI Music Video",
+    description: "عمل إبداعي يجمع بين الموسيقى والصورة المتحركة لصناعة تجربة شخصية دافئة بالذكاء الاصطناعي.",
+    tags: ["AI Video", "Creative Storytelling"],
+    image: "/manus-storage/Asongformy3littlechildrens_595eddad.mp4",
+    accent: "coral",
+    video: true,
+  },
 ];
 
 const journey = [
@@ -209,9 +219,13 @@ export default function Home() {
           </div>
           <div className="work-grid">
             {aiWorks.map((work) => (
-              <article className={`work-card work-${work.accent}`} key={work.number}>
+              <article className={`work-card work-${work.accent} ${work.video ? "work-video" : ""}`} key={work.number}>
                 <div className="work-image-wrap">
-                  <img src={work.image} alt="" className="work-image" />
+                  {work.video ? (
+                    <video className="work-image" src={work.image} controls preload="metadata" aria-label={work.title} />
+                  ) : (
+                    <img src={work.image} alt="" className="work-image" />
+                  )}
                   <div className="work-image-shade" />
                   <span className="work-number">{work.number}</span>
                   <span className="work-arrow"><ExternalLink size={16} /></span>
@@ -221,7 +235,7 @@ export default function Home() {
                   <h3>{work.title}</h3>
                   <p>{work.description}</p>
                   <div className="tag-row">{work.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-                  <a className="work-source" href={work.source} target="_blank" rel="noreferrer"><Github size={13} /> المصدر على GitHub <ArrowUpLeft size={13} /></a>
+                  {work.source && <a className="work-source" href={work.source} target="_blank" rel="noreferrer"><Github size={13} /> المصدر على GitHub <ArrowUpLeft size={13} /></a>}
                 </div>
               </article>
             ))}

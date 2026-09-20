@@ -8,6 +8,7 @@ A bilingual Arabic/English personal portfolio for Asma Mohammad Al-far, a comput
 - Responsive portfolio layout for desktop and mobile.
 - CV-led sections for experience, education, skills, certifications, languages, and contact details.
 - Dedicated AI course showcase with original generated visual assets.
+- Native video showcase for AI-generated creative work, including the uploaded family song video.
 - Smooth anchor navigation and reduced-motion support.
 
 ## Local development
